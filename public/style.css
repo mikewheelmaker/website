@@ -1,0 +1,22 @@
+body {
+    background-color: ivory;
+}
+
+footer {
+    position: sticky;
+    bottom: 0px;
+    padding: 10px;
+    background-color: ivory;
+    text-align: center;
+}
+
+
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}

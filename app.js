@@ -27,6 +27,14 @@ app.get('/', (req, res) => {
 	res.redirect('http://radu.rotariu.me/home');
 });
 
+//general functions
+function show(id) {
+	document.getElementById(id).style.display='inline';
+}
+function hide(id) {
+    document.getElementById(id).style.display='none';
+}
+
 //Anisoara Rotariu subdomain functionality
 anisoara.get('/', (req, res) =>  {
 	res.redirect('http://anisoara.rotariu.me/home');

@@ -10,16 +10,31 @@ footer {
     text-align: center;
 }
 
-  /* Hide the browser's default radio button */
-  .container input {
+/* Customize the label (the container) */
+.container {
+    display: inline-block;
+    position: relative;
+    padding-right: 10px;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
 }
-  
-  /* Create a custom radio button */
+
+/* Create a custom radio button */
 .checkmark {
     position: absolute;
     top: 2px;
@@ -29,12 +44,12 @@ footer {
     background-color: #eee;
     border-radius: 50%;
 }
-  
+
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
     background-color: #ccc;
 }
-  
+
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
     background-color: rgb(15, 76, 129);

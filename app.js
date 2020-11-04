@@ -40,25 +40,49 @@ anisoara.get('/testeBAC', (req, res) => {
 	res.render('testeBAC');
 });
 
+anisoara.post('/rezultatBAC', (req, res) => {
+	res.render('rezultatBAC');
+})
+
 anisoara.get('/testeGM', (req, res) => {
 	res.render('testeGM');
 });
+
+anisoara.post('/rezultatGM', (req, res) => {
+	res.render('rezultatGM');
+})
 
 anisoara.get('/testeADM', (req, res) => {
 	res.render('testeADM');
 });
 
+anisoara.post('/rezultatADM', (req, res) => {
+	res.render('rezultatADM');
+})
+
 anisoara.get('/testeCriteriiSiruri', (req, res) => {
 	res.render('testeCS');
 });
+
+anisoara.post('/rezultatCS', (req, res) => {
+	res.render('rezultatCS');
+})
 
 anisoara.get('/testeLimiteSiruri', (req, res) => {
 	res.render('testeLS');
 });
 
+anisoara.post('/rezultatLS', (req, res) => {
+	res.render('rezultatLS');
+})
+
 anisoara.get('/testeLimiteParametri', (req, res) => {
 	res.render('testeLP');
 });
+
+anisoara.post('/rezultatLP', (req, res) => {
+	res.render('rezultatLP');
+})
 
 //Radu-Mihai Rotariu subdomain functionality
 radu.get('/', (req, res) =>  {

@@ -48,10 +48,6 @@ anisoara.get('/testeGM', (req, res) => {
 	res.render('testeGM');
 });
 
-anisoara.post('/rezultatGM', (req, res) => {
-	res.render('rezultatGM');
-})
-
 anisoara.get('/testeADM', (req, res) => {
 	res.render('testeADM');
 });

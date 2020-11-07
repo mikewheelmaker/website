@@ -6,6 +6,10 @@ footer {
     background-color: white;
 }
 
+h1 {
+    text-align: center;
+}
+
 /* Customize the label (the container) */
 .container {
     display: inline-block;

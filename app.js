@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 
 //Anisoara Rotariu subdomain functionality
 let listaADM;
-fs.readFile('./public/ADM.json', (err, data) => {
+fs.readFile('ADM.json', (err, data) => {
 	if (err) throw err;
 	listaADM = JSON.parse(data);
 });

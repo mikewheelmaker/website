@@ -18,6 +18,10 @@ div {
     text-align: center;
 }
 
+form {
+    text-align: center;
+}
+
 /* Customize the label (the container) */
 .container {
     display: inline-block;

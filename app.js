@@ -35,24 +35,36 @@ fs.readFile('public/anisoara/ADM.json', (err, data) => {
 	listaADM = JSON.parse(data);
 });
 
+let listaBAC;
+fs.readFile('public/anisoara/BAC.json', (err, data) => {
+	if (err) throw err;
+	listaBAC = JSON.parse(data);
+});
+
+let listaCS;
+fs.readFile('public/anisoara/CS.json', (err, data) => {
+	if (err) throw err;
+	listaCS = JSON.parse(data);
+});
+
+let listaLP;
+fs.readFile('public/anisoara/LP.json', (err, data) => {
+	if (err) throw err;
+	listaLP = JSON.parse(data);
+});
+
+let listaLS;
+fs.readFile('public/anisoara/LS.json', (err, data) => {
+	if (err) throw err;
+	listaLS = JSON.parse(data);
+});
+
 anisoara.get('/', (req, res) =>  {
 	res.redirect('http://anisoara.rotariu.me/home');
 });
 
 anisoara.get('/home', (req, res) => {
 	res.render('homeAnisoara');
-});
-
-anisoara.get('/testeBAC', (req, res) => {
-	res.render('testeBAC');
-});
-
-anisoara.post('/rezultatBAC', (req, res) => {
-	res.render('rezultatBAC');
-})
-
-anisoara.get('/testeGM', (req, res) => {
-	res.render('testeGM');
 });
 
 anisoara.get('/testeADM', (req, res) => {
@@ -68,31 +80,71 @@ anisoara.post('/rezultatADM', (req, res) => {
 			c.push([i, parseInt(a[i])]);
 	}
 	res.render('rezultatADM', {Raspunsuri_gresite: c});
-})
+});
+
+anisoara.get('/testeBAC', (req, res) => {
+	res.render('testeBAC');
+});
+
+anisoara.post('/rezultatBAC', (req, res) => {
+	let json = JSON.stringify(req.body);
+	var a = JSON.parse(json);
+	var c = [];
+	for(let i = 0; i < listaBAC.length; ++i) {
+		if(a[i] != listaBAC[i].corect)
+			c.push([i, parseInt(a[i])]);
+	}
+	res.render('rezultatBAC', {Raspunsuri_gresite: c});
+});
 
 anisoara.get('/testeCriteriiSiruri', (req, res) => {
 	res.render('testeCS');
 });
 
 anisoara.post('/rezultatCS', (req, res) => {
-	res.render('rezultatCS');
-})
-
-anisoara.get('/testeLimiteSiruri', (req, res) => {
-	res.render('testeLS');
+	let json = JSON.stringify(req.body);
+	var a = JSON.parse(json);
+	var c = [];
+	for(let i = 0; i < listaCS.length; ++i) {
+		if(a[i] != listaCS[i].corect)
+			c.push([i, parseInt(a[i])]);
+	}
+	res.render('rezultatCS', {Raspunsuri_gresite: c});
 });
 
-anisoara.post('/rezultatLS', (req, res) => {
-	res.render('rezultatLS');
-})
+anisoara.get('/testeGM', (req, res) => {
+	res.render('testeGM');
+});
 
 anisoara.get('/testeLimiteParametri', (req, res) => {
 	res.render('testeLP');
 });
 
 anisoara.post('/rezultatLP', (req, res) => {
-	res.render('rezultatLP');
-})
+	let json = JSON.stringify(req.body);
+	var a = JSON.parse(json);
+	var c = [];
+	for(let i = 0; i < listaLP.length; ++i) {
+		if(a[i] != listaLP[i].corect)
+			c.push([i, parseInt(a[i])]);
+	}
+	res.render('rezultatLP', {Raspunsuri_gresite: c});
+});
+
+anisoara.get('/testeLimiteSiruri', (req, res) => {
+	res.render('testeLS');
+});
+
+anisoara.post('/rezultatLS', (req, res) => {
+	let json = JSON.stringify(req.body);
+	var a = JSON.parse(json);
+	var c = [];
+	for(let i = 0; i < listaLS.length; ++i) {
+		if(a[i] != listaLS[i].corect)
+			c.push([i, parseInt(a[i])]);
+	}
+	res.render('rezultatLS', {Raspunsuri_gresite: c});
+});
 
 //Radu-Mihai Rotariu subdomain functionality
 radu.get('/', (req, res) =>  {

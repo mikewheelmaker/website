@@ -7,24 +7,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="0" value="0" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 0 && r[1] == 0)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">b
             <input type="radio" name="0" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 0 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="0" value="2" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">d
             <input type="radio" name="0" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 0 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('LS1r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS1r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS1r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS1r1.png" id="LS1r1" style="display:none">
     </p>
@@ -33,24 +44,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="1" value="0" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">b
             <input type="radio" name="1" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 1 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="1" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 1 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="1" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 1 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('LS2r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS2r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS2r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS2r1.png" id="LS2r1" style="display:none">
     </p>
@@ -59,24 +81,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="2" value="0" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 2 && r[1] == 0)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">b
             <input type="radio" name="2" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 2 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="2" value="2" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">d
             <input type="radio" name="2" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 2 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('LS3r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS3r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS3r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS3r1.png" id="LS3r1" style="display:none">
     </p>
@@ -85,24 +118,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="3" value="0" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 3 && r[1] == 0)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">b
             <input type="radio" name="3" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 3 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="3" value="2" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">d
             <input type="radio" name="3" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 3 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('LS4r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS4r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS4r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS4r1.png" id="LS4r1" style="display:none">
     </p>
@@ -111,24 +155,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="4" value="0" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 4 && r[1] == 0)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">b
             <input type="radio" name="4" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 4 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="4" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 4 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="4" value="3" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('LS5r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS5r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS5r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS5r1.png" id="LS5r1" style="display:none">
     </p>
@@ -137,24 +192,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="5" value="0" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">b
             <input type="radio" name="5" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 5 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="5" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 5 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="5" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 5 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('LS6r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS6r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS6r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS6r1.png" id="LS6r1" style="display:none">
     </p>
@@ -163,24 +229,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="6" value="0" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 6 && r[1] == 0)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">b
             <input type="radio" name="6" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 6 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="6" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 6 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="6" value="3" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('LS7r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS7r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS7r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS7r1.png" id="LS7r1" style="display:none">
     </p>
@@ -189,24 +266,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="7" value="0" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">b
             <input type="radio" name="7" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 7 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="7" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 7 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="7" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 7 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('LS8r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS8r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS8r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS8r1.png" id="LS8r1" style="display:none">
     </p>
@@ -215,24 +303,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="8" value="0" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 8 && r[1] == 0)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">b
             <input type="radio" name="8" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 8 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="8" value="2" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">d
             <input type="radio" name="8" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 8 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('LS9r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS9r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS9r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS9r1.png" id="LS9r1" style="display:none">
     </p>
@@ -241,24 +340,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="9" value="0" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">b
             <input type="radio" name="9" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 9 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="9" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 9 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="9" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 9 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('LS10r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS10r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS10r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS10r1.png" id="LS10r1" style="display:none">
     </p>
@@ -267,24 +377,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="10" value="0" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 10 && r[1] == 0)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">b
             <input type="radio" name="10" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 10 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="10" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 10 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="10" value="3" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('LS11r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS11r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS11r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS11r1.png" id="LS11r1" style="display:none">
     </p>
@@ -293,518 +414,168 @@
     <p>
         <label class="container">a
             <input type="radio" name="11" value="0" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 11 && r[1] == 0)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">b
             <input type="radio" name="11" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 11 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="11" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 11 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="11" value="3" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('LS12r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS12r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS12r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS12r1.png" id="LS12r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS13.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="12" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="12" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="12" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="12" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS13r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS13r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS13r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS13r1.png" id="LS13r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS14.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="13" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="13" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="13" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="13" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS14r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS14r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS14r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS14r1.png" id="LS14r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS15.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="14" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="14" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="14" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="14" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS15r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS15r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS15r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS15r1.png" id="LS15r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS16.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="15" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="15" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="15" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="15" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS16r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS16r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS16r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS16r1.png" id="LS16r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS17.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="16" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="16" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="16" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="16" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS17r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS17r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS17r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS17r1.png" id="LS17r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS18.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="17" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="17" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="17" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="17" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS18r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS18r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS18r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS18r1.png" id="LS18r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS19.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="18" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="18" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="18" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="18" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS19r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS19r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS19r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS19r1.png" id="LS19r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS20.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="19" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="19" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="19" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="19" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS20r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS20r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS20r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS20r1.png" id="LS20r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS21.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="20" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="20" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="20" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="20" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS21r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS21r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS21r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS21r1.png" id="LS21r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS22.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="21" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="21" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="21" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="21" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS22r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS22r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS22r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS22r1.png" id="LS22r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS23.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="22" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="22" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="22" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="22" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS23r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS23r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS23r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS23r1.png" id="LS23r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS24.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="23" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="23" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="23" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="23" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS24r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS24r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS24r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS24r1.png" id="LS24r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS25.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="24" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="24" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="24" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="24" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS25r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS25r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS25r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS25r1.png" id="LS25r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS26.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="25" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="25" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="25" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="25" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS26r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS26r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS26r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS26r1.png" id="LS26r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS27.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="26" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="26" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="26" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="26" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS27r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS27r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS27r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS27r1.png" id="LS27r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS28.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="27" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="27" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="27" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="27" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS28r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS28r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS28r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS28r1.png" id="LS28r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS29.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="28" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="28" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="28" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="28" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS29r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS29r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS29r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS29r1.png" id="LS29r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS30.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="29" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="29" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="29" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="29" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS30r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS30r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS30r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS30r1.png" id="LS30r1" style="display:none">
     </p>
     <img src="anisoara\testeLS\LS31.png">
     </br>
     <p>
-        <label class="container">a
-            <input type="radio" name="30" value="0" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">b
-            <input type="radio" name="30" value="1" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">c
-            <input type="radio" name="30" value="2" disabled>
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">d
-            <input type="radio" name="30" value="3" disabled>
-            <span class="checkmark"></span>
-        </label>
-    </p>
-    <p>
-        <input type="button" onclick="show('LS31r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('LS31r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('LS31r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeLS\LS31r1.png" id="LS31r1" style="display:none">
     </p>

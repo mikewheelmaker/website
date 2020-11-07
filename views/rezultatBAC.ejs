@@ -7,24 +7,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="0" value="0" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">b
             <input type="radio" name="0" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 0 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="0" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 0 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="0" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 0 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('BAC1r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('BAC1r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('BAC1r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeBAC\BAC1r1.png" id="BAC1r1" style="display:none">
     </p>
@@ -33,24 +44,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="1" value="0" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">b
             <input type="radio" name="1" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 1 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="1" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 1 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="1" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 1 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('BAC2r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('BAC2r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('BAC2r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeBAC\BAC2r1.png" id="BAC2r1" style="display:none">
     </p>
@@ -59,19 +81,31 @@
     <p>
         <label class="container">a
             <input type="radio" name="2" value="0" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 2 && r[1] == 0)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">b
             <input type="radio" name="2" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 2 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="2" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 2 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="2" value="3" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
     </p>
     <img src="anisoara\testeBAC\BAC4.png">
@@ -79,19 +113,31 @@
     <p>
         <label class="container">a
             <input type="radio" name="3" value="0" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 3 && r[1] == 0)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">b
             <input type="radio" name="3" value="1" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">c
             <input type="radio" name="3" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 3 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="3" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 3 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <img src="anisoara\testeBAC\BAC5.png">
@@ -99,19 +145,31 @@
     <p>
         <label class="container">a
             <input type="radio" name="4" value="0" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">b
             <input type="radio" name="4" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 4 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="4" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 4 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="4" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 4 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <img src="anisoara\testeBAC\BAC6.png">
@@ -119,19 +177,31 @@
     <p>
         <label class="container">a
             <input type="radio" name="5" value="0" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">b
             <input type="radio" name="5" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 5 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="5" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 5 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="5" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 5 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <img src="anisoara\testeBAC\BAC7.png">
@@ -139,19 +209,31 @@
     <p>
         <label class="container">a
             <input type="radio" name="6" value="0" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 6 && r[1] == 0)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">b
             <input type="radio" name="6" value="1" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">c
             <input type="radio" name="6" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 6 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="6" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 6 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <img src="anisoara\testeBAC\BAC8.png">
@@ -159,19 +241,31 @@
     <p>
         <label class="container">a
             <input type="radio" name="7" value="0" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">b
             <input type="radio" name="7" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 7 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="7" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 7 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="7" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 7 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <img src="anisoara\testeBAC\BAC9.png">
@@ -179,19 +273,31 @@
     <p>
         <label class="container">a
             <input type="radio" name="8" value="0" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 8 && r[1] == 0)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">b
             <input type="radio" name="8" value="1" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">c
             <input type="radio" name="8" value="2" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 8 && r[1] == 2)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">d
             <input type="radio" name="8" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 8 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <img src="anisoara\testeBAC\BAC10.png">
@@ -199,24 +305,35 @@
     <p>
         <label class="container">a
             <input type="radio" name="9" value="0" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 9 && r[1] == 0)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">b
             <input type="radio" name="9" value="1" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 9 && r[1] == 1)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
         <label class="container">c
             <input type="radio" name="9" value="2" disabled>
-            <span class="checkmark"></span>
+            <span class="checkmark" style="background-color: #51CB20;"></span>
         </label>
         <label class="container">d
             <input type="radio" name="9" value="3" disabled>
-            <span class="checkmark"></span>
+            <%if(Raspunsuri_gresite.some(r=> r[0] == 9 && r[1] == 3)){%>
+                <span class="checkmark" style="background-color: rgb(255, 40, 57);"></span>
+            <%}else{%>
+                <span class="checkmark"></span>
+            <%}%>
         </label>
     </p>
     <p>
-        <input type="button" onclick="show('BAC10r1')" value="Arată rezolvare" />
-        <input type="button" onclick="hide('BAC10r1')" value="Ascunde rezolvare" />
+        <input type="button" onclick="showHide('BAC10r1')" value="Arată/Ascunde rezolvare" />
         </br>
         <img src="anisoara\testeBAC\BAC10r1.png" id="BAC10r1" style="display:none">
     </p>

@@ -3,6 +3,7 @@ const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 const subdomain = require('express-subdomain');
 const app = express();
+const fs = require('fs');
 
 // directorul 'views' va conține fișierele .ejs (html + js executat la server)
 app.set('view engine', 'ejs');
@@ -28,6 +29,12 @@ app.get('/', (req, res) => {
 });
 
 //Anisoara Rotariu subdomain functionality
+let listaADM;
+fs.readFile('public/ADM.json', (err, data) => {
+	if (err) throw err;
+	listaADM = JSON.parse(data);
+});
+
 anisoara.get('/', (req, res) =>  {
 	res.redirect('http://anisoara.rotariu.me/home');
 });
@@ -53,7 +60,14 @@ anisoara.get('/testeADM', (req, res) => {
 });
 
 anisoara.post('/rezultatADM', (req, res) => {
-	res.render('rezultatADM');
+	let json = JSON.stringify(req.body);
+	var a = JSON.parse(json);
+	var c = [];
+	for(let i = 0; i < listaADM.length; ++i) {
+		if(a[i] != listaADM[i].corect)
+			c.push([i, parseInt(a[i])]);
+	}
+	res.render('rezultatADM', {Raspunsuri_gresite: c});
 })
 
 anisoara.get('/testeCriteriiSiruri', (req, res) => {

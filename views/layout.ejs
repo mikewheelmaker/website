@@ -8,11 +8,13 @@
         </div>
 
         <script type="text/javascript">
-            function show(id) {
-                document.getElementById(id).style.display='inline';
-            }
-            function hide(id) {
-                document.getElementById(id).style.display='none';
+            function showHide(id) {
+                if(document.getElementById(id).style.display == 'inline') {
+                    document.getElementById(id).style.display='none';
+                }
+                else {
+                    document.getElementById(id).style.display='inline';
+                }
             }
         </script>
 

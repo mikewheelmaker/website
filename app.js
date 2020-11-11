@@ -68,7 +68,7 @@ anisoara.get('/home', (req, res) => {
 });
 
 anisoara.get('/testeADM', (req, res) => {
-	res.render('testeADM');
+	res.render('viewsA/testeADM');
 });
 
 anisoara.post('/rezultatADM', (req, res) => {
@@ -79,11 +79,11 @@ anisoara.post('/rezultatADM', (req, res) => {
 		if(a[i] != listaADM[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('rezultatADM', {Raspunsuri_gresite: c});
+	res.render('viewsA/rezultatADM', {Raspunsuri_gresite: c});
 });
 
 anisoara.get('/testeBAC', (req, res) => {
-	res.render('testeBAC');
+	res.render('viewsA/testeBAC');
 });
 
 anisoara.post('/rezultatBAC', (req, res) => {
@@ -94,11 +94,11 @@ anisoara.post('/rezultatBAC', (req, res) => {
 		if(a[i] != listaBAC[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('rezultatBAC', {Raspunsuri_gresite: c});
+	res.render('viewsA/rezultatBAC', {Raspunsuri_gresite: c});
 });
 
 anisoara.get('/testeCriteriiSiruri', (req, res) => {
-	res.render('testeCS');
+	res.render('viewsA/testeCS');
 });
 
 anisoara.post('/rezultatCS', (req, res) => {
@@ -109,15 +109,15 @@ anisoara.post('/rezultatCS', (req, res) => {
 		if(a[i] != listaCS[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('rezultatCS', {Raspunsuri_gresite: c});
+	res.render('viewsA/rezultatCS', {Raspunsuri_gresite: c});
 });
 
 anisoara.get('/testeGM', (req, res) => {
-	res.render('testeGM');
+	res.render('viewsA/testeGM');
 });
 
 anisoara.get('/testeLimiteParametri', (req, res) => {
-	res.render('testeLP');
+	res.render('viewsA/testeLP');
 });
 
 anisoara.post('/rezultatLP', (req, res) => {
@@ -128,11 +128,11 @@ anisoara.post('/rezultatLP', (req, res) => {
 		if(a[i] != listaLP[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('rezultatLP', {Raspunsuri_gresite: c});
+	res.render('viewsA/rezultatLP', {Raspunsuri_gresite: c});
 });
 
 anisoara.get('/testeLimiteSiruri', (req, res) => {
-	res.render('testeLS');
+	res.render('viewsA/testeLS');
 });
 
 anisoara.post('/rezultatLS', (req, res) => {
@@ -143,7 +143,7 @@ anisoara.post('/rezultatLS', (req, res) => {
 		if(a[i] != listaLS[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('rezultatLS', {Raspunsuri_gresite: c});
+	res.render('viewsA/rezultatLS', {Raspunsuri_gresite: c});
 });
 
 //Radu-Mihai Rotariu subdomain functionality
@@ -152,51 +152,51 @@ radu.get('/', (req, res) =>  {
 });
 
 radu.get('/home', (req, res) => {
-	res.render('homeRadu');
+	res.render('viewsR/homeRadu');
 });
 
 radu.get('/cv', (req, res) => {
-	res.render('cv');
+	res.render('viewsR/cv');
 });
 
 radu.get('/utilities', (req, res) => {
-	res.render('utilities');
+	res.render('viewsR/utilities');
 });
 
 radu.get('/iqtests', (req, res) => {
-	res.render('iqtests')
+	res.render('viewsR/iqtests')
 });
 
 radu.get('/raven1', (req, res) => {
-	res.render('raven1');
+	res.render('viewsR/raven1');
 });
 
 radu.post('/resultRaven1', (req, res) => {
-	res.render('resultRaven1');
+	res.render('viewsR/resultRaven1');
 });
 
 radu.get('/raven2', (req, res) => {
-	res.render('raven2');
+	res.render('viewsR/raven2');
 });
 
 radu.post('/resultRaven2', (req, res) => {
-	res.render('resultRaven2');
+	res.render('viewsR/resultRaven2');
 });
 
 radu.get('/serebryakov', (req, res) => {
-	res.render('serebryakov');
+	res.render('viewsR/serebryakov');
 });
 
 radu.post('/resultSerebryakov', (req, res) => {
-	res.render('resultSerebryakov');
+	res.render('viewsR/resultSerebryakov');
 });
 
 radu.get('/apps', (req, res) => {
-	res.render('apps');
+	res.render('viewsR/apps');
 });
 
 radu.get('/games', (req, res) => {
-	res.render('games');
+	res.render('viewsR/games');
 });
 
 app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));

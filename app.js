@@ -64,7 +64,7 @@ anisoara.get('/', (req, res) =>  {
 });
 
 anisoara.get('/home', (req, res) => {
-	res.render(require.resolve('./views/viewsA/homeAnisoara'));
+	res.render('homeAnisoara');
 });
 
 anisoara.get('/testeADM', (req, res) => {

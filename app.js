@@ -64,7 +64,7 @@ anisoara.get('/', (req, res) =>  {
 });
 
 anisoara.get('/home', (req, res) => {
-	res.render('homeAnisoara');
+	res.render(require.resolve('./views/viewsA/homeAnisoara'));
 });
 
 anisoara.get('/testeADM', (req, res) => {
@@ -153,6 +153,50 @@ radu.get('/', (req, res) =>  {
 
 radu.get('/home', (req, res) => {
 	res.render('homeRadu');
+});
+
+radu.get('/cv', (req, res) => {
+	res.render('cv');
+});
+
+radu.get('/utilities', (req, res) => {
+	res.render('utilities');
+});
+
+radu.get('/iqtests', (req, res) => {
+	res.render('iqtests')
+});
+
+radu.get('/raven1', (req, res) => {
+	res.render('raven1');
+});
+
+radu.post('/resultRaven1', (req, res) => {
+	res.render('resultRaven1');
+});
+
+radu.get('/raven2', (req, res) => {
+	res.render('raven2');
+});
+
+radu.post('/resultRaven2', (req, res) => {
+	res.render('resultRaven2');
+});
+
+radu.get('/serebryakov', (req, res) => {
+	res.render('serebryakov');
+});
+
+radu.post('/resultSerebryakov', (req, res) => {
+	res.render('resultSerebryakov');
+});
+
+radu.get('/apps', (req, res) => {
+	res.render('apps');
+});
+
+radu.get('/games', (req, res) => {
+	res.render('games');
 });
 
 app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));

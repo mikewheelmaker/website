@@ -64,11 +64,11 @@ anisoara.get('/', (req, res) =>  {
 });
 
 anisoara.get('/home', (req, res) => {
-	res.render('viewsA/homeAnisoara');
+	res.render('homeAnisoara');
 });
 
 anisoara.get('/testeADM', (req, res) => {
-	res.render('viewsA/testeADM');
+	res.render('testeADM');
 });
 
 anisoara.post('/rezultatADM', (req, res) => {
@@ -79,11 +79,11 @@ anisoara.post('/rezultatADM', (req, res) => {
 		if(a[i] != listaADM[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('viewsA/rezultatADM', {Raspunsuri_gresite: c});
+	res.render('rezultatADM', {Raspunsuri_gresite: c});
 });
 
 anisoara.get('/testeBAC', (req, res) => {
-	res.render('viewsA/testeBAC');
+	res.render('testeBAC');
 });
 
 anisoara.post('/rezultatBAC', (req, res) => {
@@ -94,7 +94,7 @@ anisoara.post('/rezultatBAC', (req, res) => {
 		if(a[i] != listaBAC[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('viewsA/rezultatBAC', {Raspunsuri_gresite: c});
+	res.render('rezultatBAC', {Raspunsuri_gresite: c});
 });
 
 anisoara.get('/testeCriteriiSiruri', (req, res) => {
@@ -109,15 +109,15 @@ anisoara.post('/rezultatCS', (req, res) => {
 		if(a[i] != listaCS[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('viewsA/rezultatCS', {Raspunsuri_gresite: c});
+	res.render('rezultatCS', {Raspunsuri_gresite: c});
 });
 
 anisoara.get('/testeGM', (req, res) => {
-	res.render('viewsA/testeGM');
+	res.render('testeGM');
 });
 
 anisoara.get('/testeLimiteParametri', (req, res) => {
-	res.render('viewsA/testeLP');
+	res.render('testeLP');
 });
 
 anisoara.post('/rezultatLP', (req, res) => {
@@ -128,11 +128,11 @@ anisoara.post('/rezultatLP', (req, res) => {
 		if(a[i] != listaLP[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('viewsA/rezultatLP', {Raspunsuri_gresite: c});
+	res.render('rezultatLP', {Raspunsuri_gresite: c});
 });
 
 anisoara.get('/testeLimiteSiruri', (req, res) => {
-	res.render('viewsA/testeLS');
+	res.render('testeLS');
 });
 
 anisoara.post('/rezultatLS', (req, res) => {
@@ -143,7 +143,7 @@ anisoara.post('/rezultatLS', (req, res) => {
 		if(a[i] != listaLS[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('viewsA/rezultatLS', {Raspunsuri_gresite: c});
+	res.render('rezultatLS', {Raspunsuri_gresite: c});
 });
 
 //Radu-Mihai Rotariu subdomain functionality

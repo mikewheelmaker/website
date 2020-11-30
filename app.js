@@ -29,7 +29,6 @@ app.get('/', (req, res) => {
 });
 
 //Anisoara Rotariu subdomain functionality
-anisoara.set('view options', { layout: 'layoutA' });
 let listaADM;
 fs.readFile('public/anisoara/ADM.json', (err, data) => {
 	if (err) throw err;
@@ -69,7 +68,7 @@ anisoara.get('/home', (req, res) => {
 });
 
 anisoara.get('/testeADM', (req, res) => {
-	res.render('viewsA/testeADM');
+	res.render('viewsA/testeADM', { layout: 'layoutA' });
 });
 
 anisoara.post('/rezultatADM', (req, res) => {
@@ -80,7 +79,7 @@ anisoara.post('/rezultatADM', (req, res) => {
 		if(a[i] != listaADM[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('viewsA/rezultatADM', {Raspunsuri_gresite: c});
+	res.render('viewsA/rezultatADM', { Raspunsuri_gresite: c, layout: 'layoutA' });
 });
 
 anisoara.get('/testeBAC', (req, res) => {
@@ -95,7 +94,7 @@ anisoara.post('/rezultatBAC', (req, res) => {
 		if(a[i] != listaBAC[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('viewsA/rezultatBAC', {Raspunsuri_gresite: c});
+	res.render('viewsA/rezultatBAC', { Raspunsuri_gresite: c, layout: 'layoutA' });
 });
 
 anisoara.get('/testeCriteriiSiruri', (req, res) => {
@@ -110,15 +109,15 @@ anisoara.post('/rezultatCS', (req, res) => {
 		if(a[i] != listaCS[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('viewsA/rezultatCS', {Raspunsuri_gresite: c});
+	res.render('viewsA/rezultatCS', {Raspunsuri_gresite: c, layout: 'layoutA' });
 });
 
 anisoara.get('/testeGM', (req, res) => {
-	res.render('viewsA/testeGM');
+	res.render('viewsA/testeGM', { layout: 'layoutA' });
 });
 
 anisoara.get('/testeLimiteParametri', (req, res) => {
-	res.render('viewsA/testeLP');
+	res.render('viewsA/testeLP', { layout: 'layoutA' });
 });
 
 anisoara.post('/rezultatLP', (req, res) => {
@@ -129,11 +128,11 @@ anisoara.post('/rezultatLP', (req, res) => {
 		if(a[i] != listaLP[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('viewsA/rezultatLP', {Raspunsuri_gresite: c});
+	res.render('viewsA/rezultatLP', {Raspunsuri_gresite: c, layout: 'layoutA' });
 });
 
 anisoara.get('/testeLimiteSiruri', (req, res) => {
-	res.render('viewsA/testeLS');
+	res.render('viewsA/testeLS', { layout: 'layoutA' });
 });
 
 anisoara.post('/rezultatLS', (req, res) => {
@@ -144,12 +143,10 @@ anisoara.post('/rezultatLS', (req, res) => {
 		if(a[i] != listaLS[i].corect)
 			c.push([i, parseInt(a[i])]);
 	}
-	res.render('viewsA/rezultatLS', {Raspunsuri_gresite: c});
+	res.render('viewsA/rezultatLS', {Raspunsuri_gresite: c, layout: 'layoutA' });
 });
 
 //Radu-Mihai Rotariu subdomain functionality
-radu.set('view options', { layout: 'layoutR' });
-
 let listRaven1;
 fs.readFile('public/radu/rpm/rpm.json', (err, data) => {
   if (err) throw err;
@@ -173,23 +170,31 @@ radu.get('/', (req, res) =>  {
 });
 
 radu.get('/home', (req, res) => {
-	res.render('viewsR/homeRadu');
+	res.render('viewsR/homeRadu', { layout: 'layoutR' });
+});
+
+radu.get('/apps', (req, res) => {
+	res.render('viewsR/apps', { layout: 'layoutR' });
 });
 
 radu.get('/cv', (req, res) => {
-	res.render('viewsR/cv');
+	res.render('viewsR/cv', { layout: 'layoutR' });
+});
+
+radu.get('/games', (req, res) => {
+	res.render('viewsR/games', { layout: 'layoutR' });
 });
 
 radu.get('/utilities', (req, res) => {
-	res.render('viewsR/utilities');
+	res.render('viewsR/utilities', { layout: 'layoutR' });
 });
 
 radu.get('/iqtests', (req, res) => {
-	res.render('viewsR/iqtests')
+	res.render('viewsR/iqtests', { layout: 'layoutR' })
 });
 
 radu.get('/raven1', (req, res) => {
-	res.render('viewsR/raven1', {rpm: listRaven1});
+	res.render('viewsR/raven1', { rpm: listRaven1, layout: 'layoutR' });
 });
 
 radu.post('/resultRaven1', (req, res) => {
@@ -197,7 +202,7 @@ radu.post('/resultRaven1', (req, res) => {
 });
 
 radu.get('/raven2', (req, res) => {
-	res.render('viewsR/raven2', {rapm: listRaven2});
+	res.render('viewsR/raven2', { rapm: listRaven2, layout: 'layoutR' });
 });
 
 radu.post('/resultRaven2', (req, res) => {
@@ -205,19 +210,11 @@ radu.post('/resultRaven2', (req, res) => {
 });
 
 radu.get('/serebryakov', (req, res) => {
-	res.render('viewsR/serebryakov', {ser: listSerebryakov});
+	res.render('viewsR/serebryakov', { ser: listSerebryakov, layout: 'layoutR' });
 });
 
 radu.post('/resultSerebryakov', (req, res) => {
 	res.render('viewsR/resultSerebryakov');
-});
-
-radu.get('/apps', (req, res) => {
-	res.render('viewsR/apps');
-});
-
-radu.get('/games', (req, res) => {
-	res.render('viewsR/games');
 });
 
 app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));

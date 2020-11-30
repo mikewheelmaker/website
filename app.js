@@ -147,6 +147,24 @@ anisoara.post('/rezultatLS', (req, res) => {
 });
 
 //Radu-Mihai Rotariu subdomain functionality
+let listRaven1;
+fs.readFile('radu\rpm\rpm.json', (err, data) => {
+  if (err) throw err;
+  listRaven1 = JSON.parse(data);
+});
+
+let listRaven2;
+fs.readFile('radu\rapm\rapm.json', (err, data) => {
+  if (err) throw err;
+  listRaven2 = JSON.parse(data);
+});
+
+let listSerebryakov;
+fs.readFile('radu\ser\serebryakov.json', (err, data) => {
+  if (err) throw err;
+  listSerebryakov = JSON.parse(data);
+});
+
 radu.get('/', (req, res) =>  {
 	res.redirect('http://radu.rotariu.me/home');
 });
@@ -168,7 +186,7 @@ radu.get('/iqtests', (req, res) => {
 });
 
 radu.get('/raven1', (req, res) => {
-	res.render('viewsR/raven1');
+	res.render('viewsR/raven1', {rpm: listRaven1});
 });
 
 radu.post('/resultRaven1', (req, res) => {
@@ -176,7 +194,7 @@ radu.post('/resultRaven1', (req, res) => {
 });
 
 radu.get('/raven2', (req, res) => {
-	res.render('viewsR/raven2');
+	res.render('viewsR/raven2', {rapm: listRaven2});
 });
 
 radu.post('/resultRaven2', (req, res) => {
@@ -184,7 +202,7 @@ radu.post('/resultRaven2', (req, res) => {
 });
 
 radu.get('/serebryakov', (req, res) => {
-	res.render('viewsR/serebryakov');
+	res.render('viewsR/serebryakov', {ser: listSerebryakov});
 });
 
 radu.post('/resultSerebryakov', (req, res) => {

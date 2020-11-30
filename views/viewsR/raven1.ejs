@@ -1,1 +1,61 @@
-<h1>Raven1</h1>
+<h1>Raven Progressive Matrices (Percentiles)</h1>
+</br>
+<form action="/resultRaven1" method="POST">
+    </br>
+    </br>
+    <% for(let i=0; i < rpm.length; ++i) {%>
+        <% if(i == 0) { %>
+            <div id="question<%- i %>" style="display:inline">
+                <img src="radu\rpm\rpm<%- i %>.jpg" width="450" height="500">
+                </br>
+                <% for(let j=0; j < rpm[i].variante.length; ++j) {%>
+                    <label class="container"><%- rpm[i].variante[j] -%>
+                        <input type="radio" name="<%- i %>" value="<%- j %>">
+                        <span class="checkmark"></span>
+                    </label>
+                <% } %>
+                <p><input type="button" onclick="hideCurrentShowNext('question<%- i %>', 'question<%- i+1 %>')" value="Next" /></p>
+            </div>
+        <% } %>
+        <% if(i != 0 && i != (rpm.length - 2)) { %>
+            <div id="question<%- i %>" style="display:none">
+                <img src="radu\rpm\rpm<%- i %>.jpg" width="450" height="500">
+                </br>
+                <% for(let j=0; j < rpm[i].variante.length; ++j) {%>
+                    <label class="container"><%- rpm[i].variante[j] -%>
+                        <input type="radio" name="<%- i %>" value="<%- j %>">
+                        <span class="checkmark"></span>
+                    </label>
+                <% } %>
+                <p><input type="button" onclick="hideCurrentShowNext('question<%- i %>', 'question<%- i+1 %>')" value="Next" /></p>
+            </div>
+        <% } %>
+        <% if(i == (rpm.length - 2)) { %>
+            <div id="question<%- i %>" style="display:none">
+                <img src="radu\rpm\rpm<%- i %>.jpg" width="450" height="500">
+                </br>
+                <% for(let j=0; j < rpm[i].variante.length; ++j) {%>
+                    <label class="container"><%- rpm[i].variante[j] -%>
+                        <input type="radio" name="<%- i %>" value="<%- j %>">
+                        <span class="checkmark"></span>
+                    </label>
+                <% } %>
+                <p><input type="button" onclick="hideCurrentShowNextEnd('question<%- i %>', 'question<%- i+1 %>', 'submitButton')" value="Next" /></p>
+            </div>
+        <% } %>
+        <% if(i == (rpm.length - 1)) { %>
+            <div id="question<%- i %>" style="display:none">
+                <img src="radu\rpm\rpm<%- i %>.jpg" width="450" height="500">
+                </br>
+                <% for(let j=0; j < rpm[i].variante.length; ++j) {%>
+                    <label class="container"><%- rpm[i].variante[j] -%>
+                        <input type="radio" name="<%- i %>" value="<%- j %>">
+                        <span class="checkmark"></span>
+                    </label>
+                <% } %>
+            </div>
+        <% } %>
+    <% } %>
+    </br>
+    <input type="submit" value="Submit" id="submitButton" style="display:none">
+</form>

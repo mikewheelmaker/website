@@ -148,19 +148,19 @@ anisoara.post('/rezultatLS', (req, res) => {
 
 //Radu-Mihai Rotariu subdomain functionality
 let listRaven1;
-fs.readFile('radu\rpm\rpm.json', (err, data) => {
+fs.readFile('radu/rpm/rpm.json', (err, data) => {
   if (err) throw err;
   listRaven1 = JSON.parse(data);
 });
 
 let listRaven2;
-fs.readFile('radu\rapm\rapm.json', (err, data) => {
+fs.readFile('radu/rapm/rapm.json', (err, data) => {
   if (err) throw err;
   listRaven2 = JSON.parse(data);
 });
 
 let listSerebryakov;
-fs.readFile('radu\ser\serebryakov.json', (err, data) => {
+fs.readFile('radu/ser/serebryakov.json', (err, data) => {
   if (err) throw err;
   listSerebryakov = JSON.parse(data);
 });

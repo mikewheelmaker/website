@@ -17,7 +17,7 @@
                 <p><input type="button" onclick="hideCurrentShowNext('question<%- i %>', 'question<%- i+1 %>')" value="Next" /></p>
             </div>
         <% } %>
-        <% if(i != 0 && i != (rpm.length - 2)) { %>
+        <% if(i != 0 && i != (rpm.length - 1)) { %>
             <div id="question<%- i %>" style="display:none">
                 <img src="radu/rpm/rpm<%- i+1 %>.jpg" width="450" height="500">
                 </br>

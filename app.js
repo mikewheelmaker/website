@@ -198,7 +198,15 @@ radu.get('/raven1', (req, res) => {
 });
 
 radu.post('/resultRaven1', (req, res) => {
-	res.render('viewsR/resultRaven1');
+	let json = JSON.stringify(req.body);
+    var a = JSON.parse(json);
+    var c = [];
+    for(let i = 0; i < listRaven1.length; ++i)
+    {
+        if(a[i] != listRaven1[i].corect)
+            c.push([i,parseInt(a[i])]);
+    }
+	res.render('viewsR/resultRaven1', { rpm: listRaven1, Raspunsuri_gresite: c, layout: 'layoutR'});
 });
 
 radu.get('/raven2', (req, res) => {
@@ -206,15 +214,31 @@ radu.get('/raven2', (req, res) => {
 });
 
 radu.post('/resultRaven2', (req, res) => {
-	res.render('viewsR/resultRaven2');
+	let json = JSON.stringify(req.body);
+    var a = JSON.parse(json);
+    var c = [];
+    for(let i = 0; i < listRaven2.length; ++i)
+    {
+        if(a[i] != listRaven2[i].corect)
+            c.push([i,parseInt(a[i])]);
+    }
+	res.render('viewsR/resultRaven2', { rapm: listRaven2, Raspunsuri_gresite: c, layout: 'layoutR'});
 });
 
 radu.get('/serebryakov', (req, res) => {
+	let json = JSON.stringify(req.body);
+    var a = JSON.parse(json);
+    var c = [];
+    for(let i = 0; i < listaRPM.length; ++i)
+    {
+        if(a[i] != listSerebryakov[i].corect)
+            c.push([i,parseInt(a[i])]);
+    }
 	res.render('viewsR/serebryakov', { ser: listSerebryakov, layout: 'layoutR' });
 });
 
 radu.post('/resultSerebryakov', (req, res) => {
-	res.render('viewsR/resultSerebryakov');
+	res.render('viewsR/resultSerebryakov', { ser: listSerebryakov, Raspunsuri_gresite: c, layout: 'layoutR'});
 });
 
 app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));

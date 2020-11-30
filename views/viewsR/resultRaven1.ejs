@@ -1,0 +1,38 @@
+<div>
+    <a href='http://radu.rotariu.me/home'>Home</a>
+    <a href='http://radu.rotariu.me/apps'>Apps</a>
+    <a href='http://radu.rotariu.me/cv'>Curriculum Vitae</a>
+    <a href='http://radu.rotariu.me/games'>Games</a>
+    <a href='http://radu.rotariu.me/iqtests'>IQ Tests</a>
+    <a href='http://radu.rotariu.me/utilities'>Utilities</a>
+</div>
+<h1 style="text-align: center">Raven Progressive Matrices (Percentiles)</h1>
+<form action="/rezultat-rpm" method="POST">
+    <p>You have correctly answered <%- rpm.length - Raspunsuri_gresite.length -%> out of <%- rpm.length -%> matrices.</p>
+    <p>Based on this score, your IQ puts you in the
+    <% if(rpm.length - Raspunsuri_gresite.length >= 55) { %>
+        95th percentile.</p>
+    <% } else { %>
+        <% if(rpm.length - Raspunsuri_gresite.length >= 54) { %>
+            90th percentile.</p>
+        <% } else { %>
+            <% if(rpm.length - Raspunsuri_gresite.length >= 49) { %>
+                75th percentile.</p>
+            <% } else { %>
+                <% if(rpm.length - Raspunsuri_gresite.length >= 44) { %>
+                    50th percentile.</p>
+                <% } else { %>
+                    <% if(rpm.length - Raspunsuri_gresite.length >= 37) { %>
+                        25th percentile.</p>
+                    <% } else { %>
+                        <% if(rpm.length - Raspunsuri_gresite.length >= 28) { %>
+                            10th percentile.</p>
+                        <% } else { %>
+                            5th percentile.</p>
+                        <% } %>
+                    <% } %>
+                <% } %>
+            <% } %>
+        <% } %>
+    <% } %>
+</form>

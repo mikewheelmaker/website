@@ -229,7 +229,7 @@ radu.get('/serebryakov', (req, res) => {
 	let json = JSON.stringify(req.body);
     var a = JSON.parse(json);
     var c = [];
-    for(let i = 0; i < listaRPM.length; ++i)
+    for(let i = 0; i < listSerebryakov.length; ++i)
     {
         if(a[i] != listSerebryakov[i].corect)
             c.push([i,parseInt(a[i])]);

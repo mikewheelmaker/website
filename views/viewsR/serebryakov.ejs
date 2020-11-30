@@ -9,7 +9,7 @@
                 <img src="radu/ser/ser<%- i+1 %>.jpg" width="450" height="500">
                 </br>
                 <% for(let j=0; j < ser[i].variante.length; ++j) {%>
-                    <label class="container"><%- rpm[i].variante[j] -%>
+                    <label class="container"><%- ser[i].variante[j] -%>
                         <input type="radio" name="<%- i %>" value="<%- j %>">
                         <span class="checkmark"></span>
                     </label>

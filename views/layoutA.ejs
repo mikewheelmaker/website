@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <head>
+        <title>Rotariu Family</title>
+        <link rel="stylesheet" type="text/css" href="styleA.css">
+    </head>
+    <body>
+        <div id="background">
+        </div>
+
+        <script type="text/javascript">
+            function showHide(id) {
+                if(document.getElementById(id).style.display == 'inline') {
+                    document.getElementById(id).style.display='none';
+                }
+                else {
+                    document.getElementById(id).style.display='inline';
+                }
+            }
+            function hideCurrentShowNext(id1, id2) {
+                document.getElementById(id1).style.display='none';
+                document.getElementById(id2).style.display='inline';
+            }
+            function hideCurrentShowNextEnd(id1, id2, id3) {
+                document.getElementById(id1).style.display='none';
+                document.getElementById(id2).style.display='inline';
+                document.getElementById(id2).style.display='inline';
+            }
+        </script>
+
+        <main>
+            <%- body -%>
+        </main>
+    
+        <footer>
+            &copy;2018-2020 Radu-Mihai Rotariu & Anisoara Rotariu
+        </footer>
+    </body>
+</html>

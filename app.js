@@ -29,6 +29,7 @@ app.get('/', (req, res) => {
 });
 
 //Anisoara Rotariu subdomain functionality
+anisoara.set('view options', { layout: 'layoutA' });
 let listaADM;
 fs.readFile('public/anisoara/ADM.json', (err, data) => {
 	if (err) throw err;
@@ -64,7 +65,7 @@ anisoara.get('/', (req, res) =>  {
 });
 
 anisoara.get('/home', (req, res) => {
-	res.render('viewsA/homeAnisoara');
+	res.render('viewsA/homeAnisoara', { layout: 'layoutA' });
 });
 
 anisoara.get('/testeADM', (req, res) => {
@@ -147,6 +148,8 @@ anisoara.post('/rezultatLS', (req, res) => {
 });
 
 //Radu-Mihai Rotariu subdomain functionality
+radu.set('view options', { layout: 'layoutR' });
+
 let listRaven1;
 fs.readFile('public/radu/rpm/rpm.json', (err, data) => {
   if (err) throw err;

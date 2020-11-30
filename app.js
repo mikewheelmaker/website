@@ -226,6 +226,10 @@ radu.post('/resultRaven2', (req, res) => {
 });
 
 radu.get('/serebryakov', (req, res) => {
+	res.render('viewsR/serebryakov', { ser: listSerebryakov, layout: 'layoutR' });
+});
+
+radu.post('/resultSerebryakov', (req, res) => {
 	let json = JSON.stringify(req.body);
     var a = JSON.parse(json);
     var c = [];
@@ -234,10 +238,6 @@ radu.get('/serebryakov', (req, res) => {
         if(a[i] != listSerebryakov[i].corect)
             c.push([i,parseInt(a[i])]);
     }
-	res.render('viewsR/serebryakov', { ser: listSerebryakov, layout: 'layoutR' });
-});
-
-radu.post('/resultSerebryakov', (req, res) => {
 	res.render('viewsR/resultSerebryakov', { ser: listSerebryakov, Raspunsuri_gresite: c, layout: 'layoutR'});
 });
 

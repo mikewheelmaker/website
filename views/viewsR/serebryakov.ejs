@@ -1,1 +1,48 @@
-<h1>Serebryakov Matrices (97-160)</h1>
+<h1 style="text-align: center">Serebryakov Matrices (97-160)</h1>
+</br>
+<form action="/resultSerebryakov" method="POST">
+    </br>
+    </br>
+    <% for(let i=0; i < ser.length; ++i) {%>
+        <% if(i == 0) { %>
+            <div id="question<%- i %>" style="display:inline">
+                <img src="radu/ser/ser<%- i+1 %>.jpg" width="450" height="500">
+                </br>
+                <% for(let j=0; j < ser[i].variante.length; ++j) {%>
+                    <label class="container"><%- rpm[i].variante[j] -%>
+                        <input type="radio" name="<%- i %>" value="<%- j %>">
+                        <span class="checkmark"></span>
+                    </label>
+                <% } %>
+                <p><input type="button" onclick="hideCurrentShowNext('question<%- i %>', 'question<%- i+1 %>')" value="Next" /></p>
+            </div>
+        <% } %>
+        <% if(i != 0 && i != (ser.length - 2)) { %>
+            <div id="question<%- i %>" style="display:none">
+                <img src="radu/ser/ser<%- i+1 %>.jpg" width="450" height="500">
+                </br>
+                <% for(let j=0; j < ser[i].variante.length; ++j) {%>
+                    <label class="container"><%- ser[i].variante[j] -%>
+                        <input type="radio" name="<%- i %>" value="<%- j %>">
+                        <span class="checkmark"></span>
+                    </label>
+                <% } %>
+                <p><input type="button" onclick="hideCurrentShowNext('question<%- i %>', 'question<%- i+1 %>')" value="Next" /></p>
+            </div>
+        <% } %>
+        <% if(i == (ser.length - 1)) { %>
+            <div id="question<%- i %>" style="display:none">
+                <img src="radu/ser/ser<%- i+1 %>.jpg" width="450" height="500">
+                </br>
+                <% for(let j=0; j < ser[i].variante.length; ++j) {%>
+                    <label class="container"><%- ser[i].variante[j] -%>
+                        <input type="radio" name="<%- i %>" value="<%- j %>">
+                        <span class="checkmark"></span>
+                    </label>
+                <% } %>
+            </div>
+        <% } %>
+    <% } %>
+    </br>
+    <input type="submit" value="Submit" />
+</form>

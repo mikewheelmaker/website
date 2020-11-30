@@ -1,1 +1,48 @@
-<h1>Raven Advanced Progressive Matrices (85-136)</h1>
+<h1 style="text-align: center">Raven Advanced Progressive Matrices (85-136)</h1>
+</br>
+<form action="/resultRaven2" method="POST">
+    </br>
+    </br>
+    <% for(let i=0; i < rapm.length; ++i) {%>
+        <% if(i == 0) { %>
+            <div id="question<%- i %>" style="display:inline">
+                <img src="radu/rapm/rapm<%- i+1 %>.jpg" width="450" height="500">
+                </br>
+                <% for(let j=0; j < rapm[i].variante.length; ++j) {%>
+                    <label class="container"><%- rapm[i].variante[j] -%>
+                        <input type="radio" name="<%- i %>" value="<%- j %>">
+                        <span class="checkmark"></span>
+                    </label>
+                <% } %>
+                <p><input type="button" onclick="hideCurrentShowNext('question<%- i %>', 'question<%- i+1 %>')" value="Next" /></p>
+            </div>
+        <% } %>
+        <% if(i != 0 && i != (rapm.length - 2)) { %>
+            <div id="question<%- i %>" style="display:none">
+                <img src="radu/rapm/rapm<%- i+1 %>.jpg" width="450" height="500">
+                </br>
+                <% for(let j=0; j < rapm[i].variante.length; ++j) {%>
+                    <label class="container"><%- rapm[i].variante[j] -%>
+                        <input type="radio" name="<%- i %>" value="<%- j %>">
+                        <span class="checkmark"></span>
+                    </label>
+                <% } %>
+                <p><input type="button" onclick="hideCurrentShowNext('question<%- i %>', 'question<%- i+1 %>')" value="Next" /></p>
+            </div>
+        <% } %>
+        <% if(i == (rapm.length - 1)) { %>
+            <div id="question<%- i %>" style="display:none">
+                <img src="radu/rapm/rapm<%- i+1 %>.jpg" width="450" height="500">
+                </br>
+                <% for(let j=0; j < rapm[i].variante.length; ++j) {%>
+                    <label class="container"><%- rapm[i].variante[j] -%>
+                        <input type="radio" name="<%- i %>" value="<%- j %>">
+                        <span class="checkmark"></span>
+                    </label>
+                <% } %>
+            </div>
+        <% } %>
+    <% } %>
+    </br>
+    <input type="submit" value="Submit" />
+</form>

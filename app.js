@@ -165,6 +165,12 @@ fs.readFile('public/radu/ser/serebryakov.json', (err, data) => {
   listSerebryakov = JSON.parse(data);
 });
 
+let listPersons;
+fs.readFile('public/radu/persoane.json', (err, data) => {
+	if(err) throw err;
+	listPersons = JSON.parse(data);
+})
+
 radu.get('/', (req, res) =>  {
 	res.redirect('http://radu.rotariu.me/home');
 });
@@ -240,5 +246,9 @@ radu.post('/resultSerebryakov', (req, res) => {
     }
 	res.render('viewsR/resultSerebryakov', { ser: listSerebryakov, Raspunsuri_gresite: c, layout: 'layoutR'});
 });
+
+radu.get('/getListaPersoane', (req, res) => {
+	return listPersons;
+})
 
 app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));

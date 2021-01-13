@@ -248,7 +248,7 @@ radu.post('/resultSerebryakov', (req, res) => {
 });
 
 radu.get('/getListaPersoane', (req, res) => {
-	return listPersons;
+	return JSON(listPersons);
 })
 
 app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));

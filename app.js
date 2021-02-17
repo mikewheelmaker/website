@@ -173,24 +173,24 @@ radu.get('/home', (req, res) => {
 	res.render('viewsR/homeRadu', { layout: 'layoutR' });
 });
 
+radu.get('/iqtests', (req, res) => {
+	res.render('viewsR/iqtests', { layout: 'layoutR' })
+});
+
 radu.get('/apps', (req, res) => {
-	res.render('viewsR/apps', { layout: 'layoutR' });
+	res.render('viewsR/apps', { layout: 'layoutR' })
+});
+
+radu.get('/cpp', (req, res) => {
+	res.render('viewsR/cpp', { layout: 'layoutR' })
 });
 
 radu.get('/cv', (req, res) => {
-	res.render('viewsR/cv', { layout: 'layoutR' });
+	res.render('viewsR/cv', { layout: 'layoutR' })
 });
 
 radu.get('/games', (req, res) => {
-	res.render('viewsR/games', { layout: 'layoutR' });
-});
-
-radu.get('/utilities', (req, res) => {
-	res.render('viewsR/utilities', { layout: 'layoutR' });
-});
-
-radu.get('/iqtests', (req, res) => {
-	res.render('viewsR/iqtests', { layout: 'layoutR' })
+	res.render('viewsR/games', { layout: 'layoutR' })
 });
 
 radu.get('/raven1', (req, res) => {

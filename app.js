@@ -83,7 +83,7 @@ anisoara.post('/rezultatADM', (req, res) => {
 });
 
 anisoara.get('/testeBAC', (req, res) => {
-	res.render('viewsA/testeBAC');
+	res.render('viewsA/testeBAC', { layout: 'layoutA' });
 });
 
 anisoara.post('/rezultatBAC', (req, res) => {
@@ -98,7 +98,7 @@ anisoara.post('/rezultatBAC', (req, res) => {
 });
 
 anisoara.get('/testeCriteriiSiruri', (req, res) => {
-	res.render('viewsA/testeCS');
+	res.render('viewsA/testeCS', { layout: 'layoutA' });
 });
 
 anisoara.post('/rezultatCS', (req, res) => {

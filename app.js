@@ -197,6 +197,10 @@ radu.get('/books', (req, res) => {
 	res.render('viewsR/books', { layout: 'layoutR' })
 });
 
+radu.get('/origami3d', (req, res) => {
+	res.render('viewsR/origami3d', { layout: 'layoutR' })
+});
+
 radu.get('/raven1', (req, res) => {
 	res.render('viewsR/raven1', { rpm: listRaven1, layout: 'layoutR' });
 });

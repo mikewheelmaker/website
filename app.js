@@ -193,6 +193,10 @@ radu.get('/games', (req, res) => {
 	res.render('viewsR/games', { layout: 'layoutR' })
 });
 
+radu.get('/books', (req, res) => {
+	res.render('viewsR/books', { layout: 'layoutR' })
+});
+
 radu.get('/raven1', (req, res) => {
 	res.render('viewsR/raven1', { rpm: listRaven1, layout: 'layoutR' });
 });

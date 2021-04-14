@@ -17,6 +17,16 @@
                     document.getElementById(id).style.display='inline';
                 }
             }
+            function showHideInstructions(buttonId, divID) {
+                if(document.getElementById(divID).style.display == 'inline') {
+                    document.getElementById(divID).style.display='none';
+                    document.getElementById(buttonId).setAttribute('value', "Show");
+                }
+                else {
+                    document.getElementById(divID).style.display='inline';
+                    document.getElementById(buttonId).setAttribute('value', "Hide");
+                }
+            }
             function hideCurrentShowNext(id1, id2) {
                 document.getElementById(id1).style.display='none';
                 document.getElementById(id2).style.display='inline';

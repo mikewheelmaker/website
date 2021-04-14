@@ -249,4 +249,12 @@ radu.post('/resultSerebryakov', (req, res) => {
 	res.render('viewsR/resultSerebryakov', { ser: listSerebryakov, Raspunsuri_gresite: c, layout: 'layoutR'});
 });
 
+radu.get('/cv_pdf', (req, res) => {
+	res.status(512).send("No file available yet!");
+});
+
+radu.get('/cv_psd', (req, res) => {
+	res.status(513).send("No file available yet!");
+});
+
 app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));

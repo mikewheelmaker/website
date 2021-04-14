@@ -249,14 +249,4 @@ radu.post('/resultSerebryakov', (req, res) => {
 	res.render('viewsR/resultSerebryakov', { ser: listSerebryakov, Raspunsuri_gresite: c, layout: 'layoutR'});
 });
 
-/*
-radu.get('/cv_pdf', (req, res) => {
-	res.sendFile('public/radu/docs/Rotariu_Radu_Mihai_Resume.pdf');
-});
-
-radu.get('/cv_psd', (req, res) => {
-	res.sendFile('public/radu/docs/Resume_Template.psd');
-});
-*/
-
 app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));

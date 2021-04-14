@@ -250,11 +250,11 @@ radu.post('/resultSerebryakov', (req, res) => {
 });
 
 radu.get('/cv_pdf', (req, res) => {
-	res.status(512).send("No file available yet!");
+	res.sendFile('public/radu/docs/Rotariu_Radu_Mihai_Resume.pdf');
 });
 
 radu.get('/cv_psd', (req, res) => {
-	res.status(513).send("No file available yet!");
+	res.sendFile('public/radu/docs/Resume_Template.psd');
 });
 
 app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));

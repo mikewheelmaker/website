@@ -146,6 +146,18 @@ anisoara.post('/rezultatLS', (req, res) => {
 	res.render('viewsA/rezultatLS', {Raspunsuri_gresite: c, layout: 'layoutA' });
 });
 
+anisoara.get('/testePerformanta', (req, res) => {
+	res.render('viewsA/testePerformanta', { layout: 'layoutA' });
+});
+
+anisoara.get('/testeMonotonie', (req, res) => {
+	res.render('viewsA/testeMonotonie', { layout: 'layoutA' });
+});
+
+anisoara.get('/testeMarginire', (req, res) => {
+	res.render('viewsA/Marginire', { layout: 'layoutA' });
+});
+
 //Radu-Mihai Rotariu subdomain functionality
 let listRaven1;
 fs.readFile('public/radu/rpm/rpm.json', (err, data) => {

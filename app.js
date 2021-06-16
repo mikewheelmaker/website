@@ -155,7 +155,7 @@ anisoara.get('/testeMonotonie', (req, res) => {
 });
 
 anisoara.get('/testeMarginire', (req, res) => {
-	res.render('viewsA/Marginire', { layout: 'layoutA' });
+	res.render('viewsA/testeMarginire', { layout: 'layoutA' });
 });
 
 //Radu-Mihai Rotariu subdomain functionality

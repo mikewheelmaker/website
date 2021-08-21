@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const subdomain = require('express-subdomain');
 const app = express();
 const fs = require('fs');
+const http = require('http');
+const https = require('https');
 
 // directorul 'views' va conține fișierele .ejs (html + js executat la server)
 app.set('view engine', 'ejs');
@@ -261,4 +263,24 @@ radu.post('/resultSerebryakov', (req, res) => {
 	res.render('viewsR/resultSerebryakov', { ser: listSerebryakov, Raspunsuri_gresite: c, layout: 'layoutR'});
 });
 
-app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));
+//app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));
+// Certificate
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/rotariu.me-0001/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/rotariu.me-0001/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/rotariu.me-0001/chain.pem', 'utf8');
+
+const credentials = {
+	key: privateKey,
+	cert: certificate,
+	ca: ca
+};
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(credentials, app);
+
+httpServer.listen(80, () => {
+	console.log('HTTP Server running on port 80');
+});
+
+httpsServer.listen(443, () => {
+	console.log('HTTPS Server running on port 443');
+});

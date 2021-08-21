@@ -25,6 +25,7 @@ app.use(subdomain('radu', radu));
 
 const hostname = '147.135.209.233';
 const port = 8080;
+const httpsPort = 443
 
 app.get('/', (req, res) => {
 	res.redirect('http://radu.rotariu.me/home');
@@ -277,10 +278,10 @@ const credentials = {
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-httpServer.listen(80, () => {
-	console.log('HTTP Server running on port 80');
+httpServer.listen(port, () => {
+	console.log('HTTP Server running on port 8080');
 });
 
-httpsServer.listen(443, () => {
+httpsServer.listen(httpsPort, () => {
 	console.log('HTTPS Server running on port 443');
 });

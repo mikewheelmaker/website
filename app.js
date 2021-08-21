@@ -4,12 +4,6 @@ const bodyParser = require('body-parser');
 const subdomain = require('express-subdomain');
 const app = express();
 const fs = require('fs');
-const http = require('http');
-const https = require('https');
-var https_options = {
-	key: fs.readFileSync("/etc/letsencrypt/live/rotariu.me/privkey.pem"),
-	cert: fs.readFileSync("/etc/letsencrypt/live/rotariu.me/fullchain.pem")
-  };
 
 // directorul 'views' va conține fișierele .ejs (html + js executat la server)
 app.set('view engine', 'ejs');
@@ -26,9 +20,6 @@ const anisoara = express.Router();
 const radu = express.Router();
 app.use(subdomain('anisoara', anisoara));
 app.use(subdomain('radu', radu));
-
-var httpServer = http.createServer(app);
-var httpsServer = https.createServer(app);
 
 const hostname = '147.135.209.233';
 const port = 8080;
@@ -270,5 +261,4 @@ radu.post('/resultSerebryakov', (req, res) => {
 	res.render('viewsR/resultSerebryakov', { ser: listSerebryakov, Raspunsuri_gresite: c, layout: 'layoutR'});
 });
 
-httpServer.listen(8080);
-//httpsServer.listen(8080);
+app.listen(port, hostnome, () => console.log(`Serverul rulează la adresa http://${hostname}`));

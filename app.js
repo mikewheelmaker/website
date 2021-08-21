@@ -4,6 +4,11 @@ const bodyParser = require('body-parser');
 const subdomain = require('express-subdomain');
 const app = express();
 const fs = require('fs');
+const https = require('https');
+var https_options = {
+	key: fs.readFileSync("/etc/letsencrypt/live/rotariu.me/privkey.pem"),
+	cert: fs.readFileSync("/etc/letsencrypt/live/rotariu.me/fullchain.pem")
+  };
 
 // directorul 'views' va conține fișierele .ejs (html + js executat la server)
 app.set('view engine', 'ejs');
@@ -25,7 +30,7 @@ const hostname = '147.135.209.233';
 const port = 8080;
 
 app.get('/', (req, res) => {
-	res.redirect('http://radu.rotariu.me/home');
+	res.redirect('https://radu.rotariu.me/home');
 });
 
 //Anisoara Rotariu subdomain functionality
@@ -60,7 +65,7 @@ fs.readFile('public/anisoara/LS.json', (err, data) => {
 });
 
 anisoara.get('/', (req, res) =>  {
-	res.redirect('http://anisoara.rotariu.me/home');
+	res.redirect('https://anisoara.rotariu.me/home');
 });
 
 anisoara.get('/home', (req, res) => {
@@ -178,7 +183,7 @@ fs.readFile('public/radu/ser/serebryakov.json', (err, data) => {
 });
 
 radu.get('/', (req, res) =>  {
-	res.redirect('http://radu.rotariu.me/home');
+	res.redirect('https://radu.rotariu.me/home');
 });
 
 radu.get('/home', (req, res) => {
@@ -261,4 +266,4 @@ radu.post('/resultSerebryakov', (req, res) => {
 	res.render('viewsR/resultSerebryakov', { ser: listSerebryakov, Raspunsuri_gresite: c, layout: 'layoutR'});
 });
 
-app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));
+app.listen(port, hostname, () => console.log(`Serverul rulează la adresa https://${hostname}`));

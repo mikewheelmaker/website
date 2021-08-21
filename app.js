@@ -261,4 +261,4 @@ radu.post('/resultSerebryakov', (req, res) => {
 	res.render('viewsR/resultSerebryakov', { ser: listSerebryakov, Raspunsuri_gresite: c, layout: 'layoutR'});
 });
 
-app.listen(port, hostnome, () => console.log(`Serverul rulează la adresa http://${hostname}`));
+app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));

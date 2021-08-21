@@ -28,7 +28,7 @@ const port = 8080;
 const httpsPort = 56251;
 
 app.get('/', (req, res) => {
-	res.redirect('http://radu.rotariu.me/home');
+	res.redirect('https://radu.rotariu.me/home');
 });
 
 //Anisoara Rotariu subdomain functionality
@@ -63,7 +63,7 @@ fs.readFile('public/anisoara/LS.json', (err, data) => {
 });
 
 anisoara.get('/', (req, res) =>  {
-	res.redirect('http://anisoara.rotariu.me/home');
+	res.redirect('https://anisoara.rotariu.me/home');
 });
 
 anisoara.get('/home', (req, res) => {
@@ -181,7 +181,7 @@ fs.readFile('public/radu/ser/serebryakov.json', (err, data) => {
 });
 
 radu.get('/', (req, res) =>  {
-	res.redirect('http://radu.rotariu.me/home');
+	res.redirect('https://radu.rotariu.me/home');
 });
 
 radu.get('/home', (req, res) => {

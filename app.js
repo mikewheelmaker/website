@@ -4,8 +4,6 @@ const bodyParser = require('body-parser');
 const subdomain = require('express-subdomain');
 const app = express();
 const fs = require('fs');
-const http = require('http');
-const https = require('https');
 
 // directorul 'views' va conține fișierele .ejs (html + js executat la server)
 app.set('view engine', 'ejs');
@@ -25,10 +23,9 @@ app.use(subdomain('radu', radu));
 
 const hostname = '147.135.209.233';
 const port = 8080;
-const httpsPort = 56251;
 
 app.get('/', (req, res) => {
-	res.redirect('https://radu.rotariu.me/home');
+	res.redirect('http://radu.rotariu.me/home');
 });
 
 //Anisoara Rotariu subdomain functionality
@@ -63,7 +60,7 @@ fs.readFile('public/anisoara/LS.json', (err, data) => {
 });
 
 anisoara.get('/', (req, res) =>  {
-	res.redirect('https://anisoara.rotariu.me/home');
+	res.redirect('http://anisoara.rotariu.me/home');
 });
 
 anisoara.get('/home', (req, res) => {
@@ -181,7 +178,7 @@ fs.readFile('public/radu/ser/serebryakov.json', (err, data) => {
 });
 
 radu.get('/', (req, res) =>  {
-	res.redirect('https://radu.rotariu.me/home');
+	res.redirect('http://radu.rotariu.me/home');
 });
 
 radu.get('/home', (req, res) => {
@@ -264,24 +261,4 @@ radu.post('/resultSerebryakov', (req, res) => {
 	res.render('viewsR/resultSerebryakov', { ser: listSerebryakov, Raspunsuri_gresite: c, layout: 'layoutR'});
 });
 
-//app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));
-// Certificate
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/rotariu.me-0001/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/rotariu.me-0001/cert.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/rotariu.me-0001/chain.pem', 'utf8');
-
-const credentials = {
-	key: privateKey,
-	cert: certificate,
-	ca: ca
-};
-const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
-
-httpServer.listen(port, () => {
-	console.log('HTTP Server running on port 8080');
-});
-
-httpsServer.listen(httpsPort, () => {
-	console.log('HTTPS Server running on port 443');
-});
+app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));

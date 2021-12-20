@@ -185,12 +185,16 @@ radu.get('/home', (req, res) => {
 	res.render('viewsR/homeRadu', { layout: 'layoutR' });
 });
 
-radu.get('/iqtests', (req, res) => {
-	res.render('viewsR/iqtests', { layout: 'layoutR' })
+radu.get('/3dprinting', (req, res) => {
+	res.render('viewsR/3dprinting', { layout: 'layoutR' });
 });
 
 radu.get('/apps', (req, res) => {
 	res.render('viewsR/apps', { layout: 'layoutR' })
+});
+
+radu.get('/books', (req, res) => {
+	res.render('viewsR/books', { layout: 'layoutR' })
 });
 
 radu.get('/cpp', (req, res) => {
@@ -205,8 +209,8 @@ radu.get('/games', (req, res) => {
 	res.render('viewsR/games', { layout: 'layoutR' })
 });
 
-radu.get('/books', (req, res) => {
-	res.render('viewsR/books', { layout: 'layoutR' })
+radu.get('/iqtests', (req, res) => {
+	res.render('viewsR/iqtests', { layout: 'layoutR' })
 });
 
 radu.get('/origami3d', (req, res) => {

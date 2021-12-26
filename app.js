@@ -37,7 +37,7 @@ fs.readFile('public/radu/ser/serebryakov.json', (err, data) => {
 });
 
 app.get('/', (req, res) =>  {
-	res.redirect('http://radumihairotariu.ro/home');
+	res.redirect('http://147.135.209.233/home');
 });
 
 app.get('/home', (req, res) => {

@@ -3,6 +3,7 @@ const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 const app = express();
 const fs = require('fs');
+const http = require('http');
 const https = require('https');
 
 // directorul 'views' va conține fișierele .ejs (html + js executat la server)
@@ -17,7 +18,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const hostname = '147.135.209.233';
-const port = 8080;
+const httpPort = 8080;
+const httpsPort = 8081;
 
 app.use(express.static(__dirname, { dotfiles: 'allow' }));
 
@@ -136,6 +138,8 @@ const credentials = {
   ca: chain
 }
 
+const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-httpsServer.listen(port, hostname, () => console.log('Running at https://${hostname}'));
+httpServer.listen(httpPort, hostname, () => console.log('Running at http://${hostname}'));
+httpsServer.listen(httpsPort, hostname, () => console.log('Running at https://${hostname}'));

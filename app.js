@@ -3,6 +3,8 @@ const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 const app = express();
 const fs = require('fs');
+const http = require('http');
+const https = require('https');
 
 // directorul 'views' va conține fișierele .ejs (html + js executat la server)
 app.set('view engine', 'ejs');
@@ -16,7 +18,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const hostname = '147.135.209.233';
-const port = 8080;
+const httpPort = 8080;
+const httpsPort = 443;
 
 app.use(express.static(__dirname, { dotfiles: 'allow' }));
 
@@ -126,4 +129,19 @@ app.post('/resultSerebryakov', (req, res) => {
 	res.render('resultSerebryakov', { ser: listSerebryakov, Raspunsuri_gresite: c });
 });
 
-app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/radumihairotariu.ro/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/radumihairotariu.ro/cert.pem', 'utf8');
+const chain = fs.readFileSync('/etc/letsencrypt/live/radumihairotariu.ro/chain.pem', 'utf8');
+const credentials = {
+  key: privateKey,
+  cert: certificate,
+  ca: chain
+}
+
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(credentials, app);
+
+httpServer.listen(httpPort, hostname, () => console.log('Running at http://${hostname}'));
+httpsServer.listen(httpsPort, hostname, () => console.log('Running at https://${hostname}'));
+
+//app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));

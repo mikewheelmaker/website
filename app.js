@@ -18,8 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const hostname = '147.135.209.233';
-const httpPort = 8080;
-const httpsPort = 443;
+const port = 8080;
 
 app.use(express.static(__dirname, { dotfiles: 'allow' }));
 
@@ -141,7 +140,7 @@ const credentials = {
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-httpServer.listen(httpPort, hostname, () => console.log('Running at http://${hostname}'));
-httpsServer.listen(httpsPort, hostname, () => console.log('Running at https://${hostname}'));
+httpServer.listen(port, hostname, () => console.log('Running at http://${hostname}'));
+httpsServer.listen(port, hostname, () => console.log('Running at https://${hostname}'));
 
 //app.listen(port, hostname, () => console.log(`Serverul rulează la adresa http://${hostname}`));

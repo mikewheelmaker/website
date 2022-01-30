@@ -18,6 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const hostname = '147.135.209.233';
 const port = 8080;
 
+app.use(express.static(__dirname, { dotfiles: allow }));
+
 let listRaven1;
 fs.readFile('public/radu/rpm/rpm.json', (err, data) => {
   if (err) throw err;

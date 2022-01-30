@@ -129,9 +129,9 @@ app.post('/resultSerebryakov', (req, res) => {
 	res.render('resultSerebryakov', { ser: listSerebryakov, Raspunsuri_gresite: c });
 });
 
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/radumihairotariu.ro/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/radumihairotariu.ro/cert.pem', 'utf8');
-const chain = fs.readFileSync('/etc/letsencrypt/live/radumihairotariu.ro/chain.pem', 'utf8');
+const privateKey = fs.readFile('/etc/letsencrypt/live/radumihairotariu.ro/privkey.pem', 'utf8');
+const certificate = fs.readFile('/etc/letsencrypt/live/radumihairotariu.ro/cert.pem', 'utf8');
+const chain = fs.readFile('/etc/letsencrypt/live/radumihairotariu.ro/chain.pem', 'utf8');
 const credentials = {
   key: privateKey,
   cert: certificate,

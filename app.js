@@ -42,7 +42,7 @@ fs.readFile('public/radu/ser/serebryakov.json', (err, data) => {
 });
 
 app.get('/', (req, res) =>  {
-	res.redirect('http://radumihairotariu.ro/home');
+	res.redirect('https://radumihairotariu.ro/home');
 });
 
 app.get('/home', (req, res) => {

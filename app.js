@@ -133,6 +133,11 @@ app.get('/utilities', (req, res) => {
 	res.render('utilities')
 });
 
+// Utilities handles
+app.get('/CIC', (req, res) => {
+	res.render('CIC')
+});
+
 const privateKey = fs.readFileSync('private/privkey.pem', 'utf8');
 const certificate = fs.readFileSync('private/cert.pem', 'utf8');
 const chain = fs.readFileSync('private/chain.pem', 'utf8');

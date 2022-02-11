@@ -1,6 +1,7 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const app = express();
+const bodyParser = require('body-parser');
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
@@ -11,6 +12,9 @@ app.set('view engine', 'ejs');
 app.use(expressLayouts);
 // 'public' directory, contains all publicly accessible elements
 app.use(express.static('public'));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const hostname = '147.135.209.233';
 const httpPort = 8080;

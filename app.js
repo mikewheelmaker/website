@@ -129,6 +129,10 @@ app.post('/resultSerebryakov', (req, res) => {
 	res.render('resultSerebryakov', { ser: listSerebryakov, Raspunsuri_gresite: c });
 });
 
+app.get('/utilities', (req, res) => {
+	res.render('utilities')
+});
+
 const privateKey = fs.readFileSync('private/privkey.pem', 'utf8');
 const certificate = fs.readFileSync('private/cert.pem', 'utf8');
 const chain = fs.readFileSync('private/chain.pem', 'utf8');

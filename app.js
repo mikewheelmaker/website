@@ -1,21 +1,16 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
-const bodyParser = require('body-parser');
 const app = express();
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
 
-// directorul 'views' va conține fișierele .ejs (html + js executat la server)
+// 'views' directory will contain the .ejs files (html + js executed by server)
 app.set('view engine', 'ejs');
-// suport pentru layout-uri - implicit fișierul care reprezintă template-ul site-ului este views/layout.ejs
+// layout support - views/layout.ejs is the base template for all .ejs pages
 app.use(expressLayouts);
-// directorul 'public' va conține toate resursele accesibile direct de către client (e.g., fișiere css, javascript, imagini)
+// 'public' directory, contains all publicly accessible elements
 app.use(express.static('public'));
-// corpul mesajului poate fi interpretat ca json; datele de la formular se găsesc în format json în req.body
-app.use(bodyParser.json());
-// utilizarea unui algoritm de deep parsing care suportă obiecte în obiecte
-app.use(bodyParser.urlencoded({ extended: true }));
 
 const hostname = '147.135.209.233';
 const httpPort = 8080;
@@ -54,31 +49,31 @@ app.get('/3dprinting', (req, res) => {
 });
 
 app.get('/apps', (req, res) => {
-	res.render('apps')
+	res.render('apps');
 });
 
 app.get('/books', (req, res) => {
-	res.render('books')
+	res.render('books');
 });
 
 app.get('/cpp', (req, res) => {
-	res.render('cpp')
+	res.render('cpp');
 });
 
 app.get('/cv', (req, res) => {
-	res.render('cv')
+	res.render('cv');
 });
 
 app.get('/games', (req, res) => {
-	res.render('games')
+	res.render('games');
 });
 
 app.get('/iqtests', (req, res) => {
-	res.render('iqtests')
+	res.render('iqtests');
 });
 
 app.get('/origami3d', (req, res) => {
-	res.render('origami3d')
+	res.render('origami3d');
 });
 
 app.get('/raven1', (req, res) => {
@@ -130,12 +125,12 @@ app.post('/resultSerebryakov', (req, res) => {
 });
 
 app.get('/utilities', (req, res) => {
-	res.render('utilities')
+	res.render('utilities');
 });
 
 // Utilities handles
 app.get('/CIC', (req, res) => {
-	res.render('CIC')
+	res.render('CIC');
 });
 
 const privateKey = fs.readFileSync('private/privkey.pem', 'utf8');

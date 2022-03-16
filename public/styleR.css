@@ -15,10 +15,10 @@ form {
 }
 
 
-table, th, td {
+/*table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
-}
+}*/
 
 /* Customize the label (the container) */
 .container {
